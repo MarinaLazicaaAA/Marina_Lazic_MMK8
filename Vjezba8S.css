@@ -1,0 +1,202 @@
+@charset "utf-8";
+/* css document */
+
+/* FONTFORGEOVI */
+
+@font-face {
+    font-family: 'Pixel';
+    src: url('Pixel/PixelifySans-VariableFont_wght.ttf');
+    font-weight: 800;
+    font-style: bold;
+}
+
+body {
+	background-image: url('slike3/pozadinica4.webp');
+	background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 100vh;
+}
+
+#pozadina1 {
+    position: absolute;
+    top: 0px;
+    left: -100%;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(206, 73, 54, 0.5);
+    transition: left 0.5s ease-in-out;
+	z-index: 1;
+}
+
+#jade {
+    position: absolute;
+    top: 0px;
+    left: -100%;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(206, 73, 54, 0.5);
+    transition: left 0.5s ease-in-out;
+	z-index: 1;
+}
+
+
+#desno, #lijevo, #gore, #dolje, #flip {
+	position: absolute;
+    bottom: 10px;
+    width: 140px;
+    height: 70px;
+    background-color: #ba3541;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Pixel';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    z-index: 10;
+    border: 3px solid gray;
+    transition: 0.1s ease-in-out;
+}
+
+#desno:hover, #lijevo:hover, #gore:hover, #dolje:hover, #flip:hover {
+    background-color: #460815;
+}
+
+
+#desno:focus ~ #jade {
+    left: 0; 
+}
+
+
+#desno {
+    left: 80px;
+    transform: skew(15deg);
+}
+
+
+#pozadina2 {
+    position: fixed;
+    top: 0;
+    right: -100%; 
+    width: 250px;
+    height: 100%;
+    background-color: rgb(167,118,77,0.5);
+    transition: right 0.5s ease-in-out; 
+    z-index: 1;
+}
+
+#lijevo:focus + #pozadina2 {
+    right: 0;
+}
+
+#lijevo {
+    right: 80px;
+    transform: skew(-15deg);
+}
+
+#pozadina3 {
+    position: absolute;
+    bottom: 0;
+    left: 250px;
+    width: 250px;
+    height: 100%;
+    background-color: rgb(100,62,58, 0.5);
+    top: -100%; 
+    transition: top 0.5s ease-in-out;
+}
+
+#gore:hover + #pozadina3 {
+    top: 0;
+}
+
+#gore {
+    left: 280px;
+    transform: skew(15deg);
+}
+
+
+#pozadina4 {
+    position: absolute;
+    bottom: 0;
+    right: 250px;
+    width: 250px;
+    height: 100%;
+    background-color: rgb(241,233,213, 0.5);
+    top: -100%; 
+    transition: top 0.5s ease-in-out;
+}
+
+#dolje:hover + #pozadina4 {
+    top: 0;
+}
+
+#dolje {
+	right: 280px;
+    transform: skew(-15deg);
+}
+
+
+#glavna {
+    position: absolute;
+    top: 50px;
+    left: 650px;
+    transition: transform 0.5s ease-in-out; 
+}
+
+
+#flip {
+    left: 700px;
+    background-color: white;
+    color: gray;
+	border: 3px solid darkred;
+}
+
+#flip:active ~ #glavna {
+    transform: rotateY(180deg); 
+}
+
+#flip:hover {
+	transition: 0.1s ease-in-out;
+	background-color: #fad6de
+}
+
+#bratz {
+	background: url('slike3/Bratz.jpg') no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    bottom: 65px;
+    left: 490px;
+    width: 140px; 
+    height: 70px;
+    transition: background 0.5s ease-out;
+}
+
+#bratz:hover {
+	background: url('slike3/rock.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+#disk {
+	position: absolute;
+    bottom: 40px; 
+    left: 920px;
+	cursor: pointer;
+	transition: transform 0.5s ease;  
+}
+
+#disk:active {
+    transform: rotate(360deg);  
+}
+
+.pjesmica {
+	position: absolute;
+	top: 0;
+	left: 620px;
+	width: 300px;
+	height: 50px;
+	display: none;
+}
